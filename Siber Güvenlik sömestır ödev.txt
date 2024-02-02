@@ -1,0 +1,103 @@
+1-cumle = input("Bir cümle girin: ")
+duzenlenmis_cumle = cumle.strip().lower()
+print(duzenlenmis_cumle)
+
+2-metin = input("Bir metin girin: ")
+karakter = input("Sayısını öğrenmek istediğiniz karakteri girin: ")
+sayi = metin.count(karakter)
+print(f"'{karakter}' karakteri metin içinde {sayi} kez geçiyor.")
+
+3-kelime = input("Bir kelime girin: ")
+harf = input("Sayısını öğrenmek istediğiniz harfi girin: ")
+sayi = kelime.count(harf)
+print(f"'{kelime}' kelimesi içinde '{harf}' harfi {sayi} kez geçiyor.")
+
+4-string1 = "Merhaba"
+string2 = "Dunya"
+birlesik_string = string1 + string2
+substring = "haba"
+konum = birlesik_string.find(substring)
+print(f"Substring '{substring}' konumu: {konum}")
+
+5-cumle = input("Bir cümle girin: ")
+kelimeler = cumle.split()
+sirali_kelimeler = sorted(kelimeler)
+print("Sıralı kelimeler:", " ".join(sirali_kelimeler))
+
+6-string1 = input("Birinci stringi girin: ")
+string2 = input("İkinci stringi girin: ")
+birlesik_string = string1 + string2
+kucuk_harf_string = birlesik_string.lower()
+print(kucuk_harf_string)
+
+7-metin = "Python programlama dili"
+substring_ekle = "ile"
+yeni_metin = metin.replace("dili", "dili " + substring_ekle)
+print(yeni_metin)
+
+8-kelime = input("Bir kelime girin: ")
+duzenlenmis_kelime = kelime.replace('a', '@')
+print(duzenlenmis_kelime)
+
+9-kelime = input("Bir kelime girin: ")
+ters_kelime = kelime[::-1]
+if kelime == ters_kelime:
+    print("Bu kelime bir palindromedir.")
+else:
+    print("Bu kelime bir palindrom değildir.")
+
+10-cumle = input("Bir cümle girin: ")
+kelimeler = cumle.split()
+en_uzun_kelime = max(kelimeler, key=len)
+print("En uzun kelime:", en_uzun_kelime)
+
+11-liste = [1, 2, 3, 4, 5, 6, 7]
+orta_eleman = len(liste) // 2
+print("Orta eleman:", liste[orta_eleman])
+
+12-tup = (10, 20, 30, 40, 50)
+yeni_tup = (tup[1], tup[3])
+print(yeni_tup)
+
+13-s = set()
+s.add(42)
+s.remove(42)
+print(s)
+
+14-sozluk = {'anahtar1': 'deger1', 'anahtar2': 'deger2'}
+sozluk['anahtar3'] = 'deger3'
+del sozluk['anahtar1']
+print(sozluk)
+
+15-liste = [1, 2, 3, 4, 5]
+yeni_sayi = 6
+orta_index = len(liste) // 2
+liste.insert(orta_index, yeni_sayi)
+print(liste)
+
+16-sozluk = liste = [1, 2, 3]
+tuple_ekle = (4, 5)
+liste[1:1] = tuple_ekle
+print(liste)
+
+17-s = {1, 2, 3, 4, 5}
+liste = list(s)
+toplam = sum(liste)
+print(toplam)
+
+
+18-sozluk = {'anahtar1': 'deger1', 'anahtar2': 'deger22', 'anahtar3': 'deger333'}
+karakter_sayilari = [len(deger) for deger in sozluk.values() if isinstance(deger, str)]
+toplam_karakter_sayisi = sum(karakter_sayilari)
+print(toplam_karakter_sayisi)
+
+19-liste = [5, 3, 9, 2, 7]
+en_buyuk_sayi = max(liste + [0])
+print("En büyük sayı:", en_buyuk_sayi)
+
+20-sozluk = {'anahtar1': 'deger1', 'anahtar2': 'deger2', 'anahtar3': 'deger3'}
+birlesik_string = ''.join(sozluk.values())
+print(birlesik_string)
+
+
+
