@@ -1,0 +1,83 @@
+1)
+def emeklilik_yasi(yas):
+    emeklilik_yasi = 65
+    kalan_yil = emeklilik_yasi - yas
+    if kalan_yil > 0:
+        print("Emekliliğinize", kalan_yil, "yıl kaldı.")
+    elif kalan_yil == 0:
+        print("Emekli olma vaktin geldi!")
+    else:
+        print("Zaten emeklisiniz.")
+
+yas = int(input("Lütfen yaşınızı girin: "))
+emeklilik_yasi(yas)
+
+2)def asal_sayilari_bul(sayi1, sayi2):
+    asal_sayilar = []
+    for sayi in range(sayi1, sayi2 + 1):
+        if sayi > 1:
+            for i in range(2, sayi):
+                if (sayi % i) == 0:
+                    break
+            else:
+                asal_sayilar.append(sayi)
+    print("Asal sayılar:", asal_sayilar)
+
+sayi1 = int(input("İlk sayıyı girin: "))
+sayi2 = int(input("İkinci sayıyı girin: "))
+asal_sayilari_bul(sayi1, sayi2)
+
+3)def en_buyuk_sayi(liste):
+    return max(liste)
+
+liste1 = [1, 3, 5, 7, 9]
+liste2 = [2, 4, 6, 8, 10]
+print("İlk listenin en büyük sayısı:", en_buyuk_sayi(liste1))
+print("İkinci listenin en büyük sayısı:", en_buyuk_sayi(liste2))
+
+4)def ilk_ve_son_esit_mi(liste):
+    if liste[0] == liste[-1]:
+        return True
+    else:
+        return False
+
+liste = [1, 2, 3, 4, 5, 1]
+print(ilk_ve_son_esit_mi(liste))
+
+5)def palindrom_sayi_mi(sayi):
+    return str(sayi) == str(sayi)[::-1]
+
+sayi = int(input("Bir sayı girin: "))
+if palindrom_sayi_mi(sayi):
+    print("Palindrom bir sayıdır.")
+else:
+    print("Palindrom bir sayı değildir.")
+
+6)def cift_tek_ayir_ve_yazdir(liste1, liste2):
+    yeni_liste = []
+    for sayi in liste1:
+        if sayi % 2 == 0:
+            yeni_liste.append(sayi)
+    for sayi in liste2:
+        if sayi % 2 != 0:
+            yeni_liste.append(sayi)
+    print("Yeni liste:", yeni_liste)
+
+liste1 = [1, 2, 3, 4, 5]
+liste2 = [6, 7, 8, 9, 10]
+cift_tek_ayir_ve_yazdir(liste1, liste2)
+
+7)import random
+
+def rus_ruleti():
+    hedef = random.randint(1, 6)
+    while True:
+        tahmin = int(input("Tahmininizi girin (1-6 arası bir sayı): "))
+        if tahmin == hedef:
+            print("Tebrikler, hedefi doğru tahmin ettiniz!")
+            break
+        else:
+            print("Hedefi bulamadınız, tekrar deneyin.")
+
+rus_ruleti()
+
